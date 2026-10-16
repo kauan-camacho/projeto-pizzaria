@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumina Pizza | Cardápio</title>
+    <link rel="stylesheet" href="assents/CSS/cardapio.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">Lumina.</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="cardapio.html">Cardápio</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </nav>
+    
+    <main class="menu-container">
+        <section class="menu-items">
+            <h2>Nosso Cardápio</h2>
+            <div class="pizza-grid" id="pizza-grid">
+                <!-- Gerado dinamicamente via JS -->
+            </div>
+        </section>
+        
+        <aside class="cart-container">
+            <h2>Seu Pedido</h2>
+            <div id="cart-items">
+                <p class="empty-cart">O carrinho está vazio.</p>
+            </div>
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="total-price">R$ 0,00</span>
+            </div>
+            <div class="user-details">
+                <input type="text" id="endereco" placeholder="Endereço de entrega (obrigatório)">
+                <select id="pagamento">
+                    <option value="" disabled selected>Forma de pagamento (Na entrega)</option>
+                    <option value="Pix">Pix</option>
+                    <option value="Cartão de Crédito">Cartão de Crédito</option>
+                    <option value="Cartão de Débito">Cartão de Débito</option>
+                    <option value="Dinheiro">Dinheiro</option>
+                </select>
+            </div>
+            <button id="btn-whatsapp">Finalizar via WhatsApp</button>
+        </aside>
+    </main>
+    <script src="assents/JS/cardapio.js"></script>
+</body>
+</html>
