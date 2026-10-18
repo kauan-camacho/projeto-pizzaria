@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#174b3a" />
+    <meta
+      name="description"
+      content="Lumina Pizza: sabores de inspiração italiana. Conheça a casa, encontre nossa localização e peça pelo WhatsApp."
+    />
+    <title>A Lumina | Lumina Pizza</title>
+    <link rel="stylesheet" href="assents/CSS/app.css" />
+    <script src="assents/JS/config.js" defer></script>
+    <script src="assents/JS/site.js" defer></script>
+    <script src="assents/JS/app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip" href="#conteudo">Ir para o conteúdo</a>
+    <div class="italian-line" aria-hidden="true"></div>
+    <header class="nav">
+      <a class="brand" href="index.html" aria-label="Lumina início"
+        >lumina<span>.</span><small>PIZZERIA ITALIANA</small></a
+      >
+      <nav class="desktop-links" aria-label="Navegação principal">
+        <a href="index.html">Início</a><a href="cardapio.html">Cardápio</a
+        ><a href="sobre.html" aria-current="page">A Lumina</a
+        ><a href="contato.html">Visite & contato</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="bag" data-open-cart>
+          Pedido <span id="cart-count">0</span></button
+        ><button
+          class="menu-toggle"
+          id="menu-toggle"
+          aria-controls="navigation-dialog"
+          aria-expanded="false"
+          aria-label="Abrir menu"
+        >
+          <span class="hamburger" aria-hidden="true"><i></i><i></i><i></i></span
+          ><span>Menu</span>
+        </button>
+      </div>
+    </header>
+    <dialog
+      class="navigation-dialog"
+      id="navigation-dialog"
+      aria-labelledby="navigation-title"
+    >
+      <div class="navigation-head">
+        <h2 id="navigation-title">Menu</h2>
+        <button
+          class="icon-button"
+          id="close-navigation"
+          aria-label="Fechar menu"
+        >
+          Fechar ✕
+        </button>
+      </div>
+      <nav aria-label="Navegação no celular">
+        <a href="index.html">Início</a><a href="cardapio.html">Cardápio</a
+        ><a href="sobre.html" aria-current="page">A Lumina</a
+        ><a href="contato.html">Visite & contato</a>
+      </nav>
+      <p>Pizza, companhia e um pouco de Itália.</p>
+      <span class="mini-flag" aria-hidden="true"></span>
+    </dialog>
+    <main id="conteudo">
+      <section class="page-intro">
+        <p class="eyebrow">LA NOSTRA CASA</p>
+        <h1>Prazer, <em>Lumina.</em></h1>
+        <p>Inspiração italiana. Um jeito acolhedor de estar à mesa.</p>
+      </section>
+      <section class="about-layout">
+        <div class="about-poster" aria-hidden="true">
+          <span class="poster-top">LA DOLCE VITA COMBINA COM</span
+          ><span class="poster-pizza">pizza<br /><em>& amore.</em></span
+          ><span class="poster-bottom">LUMINA · PIZZA ARTIGIANALE</span>
+        </div>
+        <article class="about-copy">
+          <p class="eyebrow">A NOSSA ESSÊNCIA</p>
+          <h2>Simples nos ingredientes.<br />Generosa no sabor.</h2>
+          <p id="business-bio">
+            A Lumina é uma pizzaria de inspiração italiana que valoriza o prazer
+            de uma boa pizza e os encontros à mesa. Nossa proposta combina massa
+            artesanal, ingredientes selecionados e sabores que vão dos clássicos
+            às combinações especiais.
+          </p>
+          <p>
+            Mais do que escolher um sabor, queremos que pedir uma pizza seja um
+            momento leve: do cardápio à última fatia, com cuidado em cada
+            detalhe.
+          </p>
+          <a class="text-link" href="cardapio.html">Conheça nossos sabores ↗</a>
+        </article>
+      </section>
+      <section class="principles">
+        <article>
+          <span>01</span>
+          <h3>O sabor do simples</h3>
+          <p>Combinações que dão espaço para cada ingrediente aparecer.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>Um toque italiano</h3>
+          <p>
+            Clássicos como Margherita e Burrata fazem parte do nosso cardápio.
+          </p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>Feita para reunir</h3>
+          <p>Uma pizza, boas conversas e tempo para aproveitar a companhia.</p>
+        </article>
+      </section>
+      <section class="about-cta">
+        <h2>A próxima fatia espera por você.</h2>
+        <a class="button" href="cardapio.html">Escolher minha pizza ↗</a>
+      </section>
+    </main>
+    <footer>
+      <a class="brand" href="index.html"
+        >lumina<span>.</span><small>PIZZERIA ITALIANA</small></a
+      >
+      <p>Feita com amore. Compartilhada com você.</p>
+      <a href="contato.html">Visite nossa casa ↗</a>
+    </footer>
+    <button class="mobile-order" id="mobile-order" data-open-cart hidden>
+      <span><span id="mobile-count">0 itens</span> · Ver pedido</span
+      ><strong id="mobile-subtotal"></strong>
+    </button>
+    <dialog id="cart-dialog" aria-labelledby="cart-title">
+      <div class="cart-head">
+        <div>
+          <p class="eyebrow">REVISE E FINALIZE</p>
+          <h2 id="cart-title">Seu pedido<span>.</span></h2>
+        </div>
+        <button
+          class="icon-button"
+          id="close-cart"
+          aria-label="Voltar ao cardápio"
+        >
+          Voltar
+        </button>
+      </div>
+      <div class="cart-body">
+        <div id="cart-items"></div>
+        <a class="text-link" href="cardapio.html" id="keep-shopping"
+          >+ Escolher mais sabores</a
+        >
+        <form id="checkout">
+          <h3>Como você quer receber?</h3>
+          <div class="fulfillment">
+            <label
+              ><input
+                type="radio"
+                name="fulfillment"
+                value="delivery"
+                checked
+              />
+              Entrega</label
+            ><label
+              ><input type="radio" name="fulfillment" value="pickup" />
+              Retirada</label
+            >
+          </div>
+          <label
+            >Seu nome<input
+              name="customer"
+              autocomplete="name"
+              required
+              maxlength="100"
+              placeholder="Como podemos chamar você?"
+          /></label>
+          <div id="address-fields">
+            <label
+              >Endereço completo<input
+                name="address"
+                autocomplete="street-address"
+                required
+                maxlength="250"
+                placeholder="Rua, número, bairro e cidade" /></label
+            ><label
+              >Complemento / referência <small>(opcional)</small
+              ><input
+                name="complement"
+                maxlength="200"
+                placeholder="Apartamento, bloco, ponto de referência"
+            /></label>
+          </div>
+          <label
+            >Forma de pagamento<select name="payment" required>
+              <option value="">Selecione uma opção</option>
+              <option>Pix</option>
+              <option>Cartão de crédito</option>
+              <option>Cartão de débito</option>
+              <option>Dinheiro</option>
+            </select></label
+          ><label id="change-field" hidden
+            >Troco para <small>(opcional)</small
+            ><input
+              name="change"
+              type="number"
+              min="0"
+              step="0.01"
+              placeholder="Valor em reais"
+          /></label>
+          <details class="optional-fields">
+            <summary>Adicionar observações (opcional)</summary>
+            <label
+              >Algum cuidado especial? <small>(opcional)</small
+              ><textarea
+                name="notes"
+                rows="2"
+                maxlength="500"
+                placeholder="Observações, restrições ou preferências"
+              ></textarea>
+            </label>
+          </details>
+          <div class="totals">
+            <div><span>Subtotal</span><strong id="subtotal"></strong></div>
+            <div><span>Entrega</span><span id="delivery-fee"></span></div>
+            <div class="total">
+              <strong id="total-label">Total dos produtos</strong
+              ><strong id="total"></strong>
+            </div>
+          </div>
+          <p class="checkout-note">
+            Na próxima tela, toque em Enviar no WhatsApp. A pizzaria confirmará
+            o valor e o prazo.
+          </p>
+          <p id="checkout-error" role="alert"></p>
+          <button
+            type="submit"
+            class="button checkout-button"
+            id="checkout-button"
+          >
+            Enviar pedido pelo WhatsApp
+          </button>
+        </form>
+      </div>
+    </dialog>
+    <div id="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>

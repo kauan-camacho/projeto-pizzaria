@@ -1,38 +1,187 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
-* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
-body { background-color: #fafafa; color: #111; }
-nav { display: flex; justify-content: space-between; align-items: center; padding: 2rem 5%; border-bottom: 1px solid #eee; }
-.logo { font-size: 1.5rem; font-weight: 600; letter-spacing: -1px; }
-.nav-links { list-style: none; display: flex; gap: 2rem; }
-.nav-links a { text-decoration: none; color: #111; font-weight: 400; transition: color 0.3s; }
-.nav-links a:hover { color: #d35400; }
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+body {
+  background-color: #fafafa;
+  color: #111;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 5%;
+  border-bottom: 1px solid #eee;
+}
+.logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -1px;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+.nav-links a {
+  text-decoration: none;
+  color: #111;
+  font-weight: 400;
+  transition: color 0.3s;
+}
+.nav-links a:hover {
+  color: #d35400;
+}
 
-.menu-container { display: flex; padding: 3rem 5%; gap: 3rem; min-height: 80vh; }
-.menu-items { flex: 2; }
-.menu-items h2 { font-size: 2rem; font-weight: 600; margin-bottom: 2rem; letter-spacing: -1px; }
-.pizza-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 2rem; }
-.pizza-card { background: #fff; border: 1px solid #eee; padding: 1.5rem; border-radius: 8px; transition: transform 0.2s; }
-.pizza-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
-.pizza-card h3 { font-size: 1.2rem; margin-bottom: 0.5rem; }
-.pizza-card p { font-size: 0.9rem; color: #777; margin-bottom: 1rem; min-height: 40px; line-height: 1.4; }
-.pizza-card .price { font-weight: 600; margin-bottom: 1rem; display: block; font-size: 1.1rem; }
-.pizza-card button { width: 100%; background: #111; color: #fff; border: none; padding: 0.8rem; border-radius: 4px; cursor: pointer; transition: background 0.3s; }
-.pizza-card button:hover { background: #d35400; }
+.menu-container {
+  display: flex;
+  padding: 3rem 5%;
+  gap: 3rem;
+  min-height: 80vh;
+}
+.menu-items {
+  flex: 2;
+}
+.menu-items h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  letter-spacing: -1px;
+}
+.pizza-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+}
+.pizza-card {
+  background: #fff;
+  border: 1px solid #eee;
+  padding: 1.5rem;
+  border-radius: 8px;
+  transition: transform 0.2s;
+}
+.pizza-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+.pizza-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+.pizza-card p {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 1rem;
+  min-height: 40px;
+  line-height: 1.4;
+}
+.pizza-card .price {
+  font-weight: 600;
+  margin-bottom: 1rem;
+  display: block;
+  font-size: 1.1rem;
+}
+.pizza-card button {
+  width: 100%;
+  background: #111;
+  color: #fff;
+  border: none;
+  padding: 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.pizza-card button:hover {
+  background: #d35400;
+}
 
-.cart-container { flex: 1; background: #fff; border: 1px solid #eee; padding: 2rem; border-radius: 8px; position: sticky; top: 2rem; height: fit-content; box-shadow: 0 10px 30px rgba(0,0,0,0.03); }
-.cart-container h2 { font-size: 1.5rem; margin-bottom: 1.5rem; }
-#cart-items { margin-bottom: 1.5rem; min-height: 100px; max-height: 300px; overflow-y: auto; }
-.cart-item { display: flex; justify-content: space-between; margin-bottom: 0.8rem; font-size: 0.95rem; border-bottom: 1px dashed #ddd; padding-bottom: 0.5rem; }
-.empty-cart { color: #999; font-style: italic; font-size: 0.9rem; }
-.cart-total { display: flex; justify-content: space-between; font-weight: 600; font-size: 1.2rem; margin-bottom: 1.5rem; border-top: 2px solid #111; padding-top: 1rem; }
+.cart-container {
+  flex: 1;
+  background: #fff;
+  border: 1px solid #eee;
+  padding: 2rem;
+  border-radius: 8px;
+  position: sticky;
+  top: 2rem;
+  height: fit-content;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+}
+.cart-container h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+#cart-items {
+  margin-bottom: 1.5rem;
+  min-height: 100px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.8rem;
+  font-size: 0.95rem;
+  border-bottom: 1px dashed #ddd;
+  padding-bottom: 0.5rem;
+}
+.empty-cart {
+  color: #999;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+.cart-total {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  border-top: 2px solid #111;
+  padding-top: 1rem;
+}
 
-.user-details { display: flex; flex-direction: column; gap: 1rem; margin-bottom: 1.5rem; }
-.user-details input, .user-details select { padding: 0.8rem; border: 1px solid #ccc; border-radius: 4px; font-size: 0.9rem; width: 100%; outline: none; }
-.user-details input:focus, .user-details select:focus { border-color: #111; }
-#btn-whatsapp { width: 100%; background: #25D366; color: #fff; border: none; padding: 1rem; font-size: 1rem; font-weight: 600; border-radius: 4px; cursor: pointer; transition: background 0.3s; }
-#btn-whatsapp:hover { background: #1ebe57; }
+.user-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.user-details input,
+.user-details select {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  width: 100%;
+  outline: none;
+}
+.user-details input:focus,
+.user-details select:focus {
+  border-color: #111;
+}
+#btn-whatsapp {
+  width: 100%;
+  background: #25d366;
+  color: #fff;
+  border: none;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+#btn-whatsapp:hover {
+  background: #1ebe57;
+}
 
 @media (max-width: 768px) {
-    .menu-container { flex-direction: column; }
-    .nav-links { gap: 1rem; }
+  .menu-container {
+    flex-direction: column;
+  }
+  .nav-links {
+    gap: 1rem;
+  }
 }
